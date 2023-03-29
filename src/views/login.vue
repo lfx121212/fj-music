@@ -24,13 +24,14 @@
           <div class="form-item log-in">
             <div class="table">
               <div class="table-cell">
-                <el-form ref="loginForm" >
+                <el-form ref="loginForm">
                   <h1 class="title">登录</h1>
-                  <el-input placeholder="用户名/邮箱/电话" v-model="login.user" type="text" clearable/>
-                  <el-input placeholder="密码" v-model="login.password" :type="Type" clearable/>
-                  <img class="item-icon icon-data" src="../assets/img/openEye.svg"  @click="chargeIcon(true)" v-if="icon"/>
-                  <img class="item-icon icon-data" src="../assets/img/closeEye.svg"  @click="chargeIcon(false)" v-else/>
-                  <div class="btn">登录</div>
+                  <el-input placeholder="用户名/邮箱/电话" v-model="loginData.user" type="text" clearable/>
+                  <el-input placeholder="密码" v-model="loginData.password" :type="Type" clearable/>
+                  <img class="item-icon icon-data" src="../assets/img/openEye.svg" @click="chargeIcon(true)"
+                       v-if="icon"/>
+                  <img class="item-icon icon-data" src="../assets/img/closeEye.svg" @click="chargeIcon(false)" v-else/>
+                  <div class="btn" @click.stop="loginForm">登录</div>
                 </el-form>
               </div>
             </div>
@@ -40,12 +41,12 @@
               <div class="table-cell">
                 <el-form ref="registerForm">
                   <h1 class="title">注册</h1>
-                  <el-input placeholder="邮箱" v-model="register.email" type="text" clearable/>
-                  <el-input placeholder="电话" v-model="register.phone" type="text" clearable/>
-                  <el-input placeholder="用户名" v-model="register.username" type="text" clearable/>
-                  <el-input placeholder="密码" v-model="register.password" :type="Type" clearable/>
-                  <img class="item-icon " src="../assets/img/openEye.svg"  @click="chargeIcon(true)" v-if="icon"/>
-                  <img class="item-icon " src="../assets/img/closeEye.svg"  @click="chargeIcon(false)" v-else/>
+                  <el-input placeholder="邮箱" v-model="registerData.email" type="text" clearable/>
+                  <el-input placeholder="电话" v-model="registerData.phone" type="text" clearable/>
+                  <el-input placeholder="用户名" v-model="registerData.username" type="text" clearable/>
+                  <el-input placeholder="密码" v-model="registerData.password" :type="Type" clearable/>
+                  <img class="item-icon " src="../assets/img/openEye.svg" @click="chargeIcon(true)" v-if="icon"/>
+                  <img class="item-icon " src="../assets/img/closeEye.svg" @click="chargeIcon(false)" v-else/>
                   <div class="btn">注册</div>
                 </el-form>
               </div>
@@ -64,15 +65,17 @@
 
 <script>
 
+import {login} from "@/api/login";
+
 export default {
-  name: "demo",
+  name: "loginView",
   data() {
     return {
       flag: false,
       icon: false,
       Type: 'password',
-      register: {},
-      login: {}
+      registerData: {},
+      loginData: {}
     }
   },
   mounted() {
@@ -94,6 +97,18 @@ export default {
         this.Type = 'password';
         this.icon = false;
       }
+    },
+
+    /**
+     * 登录
+     */
+    loginForm() {
+      login({'user' : this.loginData.user, 'password' : this.loginData.password}).then(res => {
+        if (res.code === 200) {
+          // 路由跳转
+          this.$router.push({ path: '/index' })
+        }
+      })
     },
   }
 }

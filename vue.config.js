@@ -19,10 +19,10 @@ module.exports = {
     historyApiFallback: true,
     allowedHosts:"all",
     proxy: {
-      '/': { // 匹配所有以fj为开头的请求路径
+      '/fj': { // 匹配所有以fj为开头的请求路径
         target: 'http://localhost:10409/', // 代理目标的基础路径
         ws: false,
-        pathRewrite: {'^/': ''} // 路径重写
+        pathRewrite: {'^/fj': ''} // 路径重写
       }
     }
   },
