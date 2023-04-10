@@ -1,0 +1,84 @@
+.heard {
+  height: 35vh;
+}
+
+.main {
+  position: relative;
+  height: 50vh;
+  margin-bottom: 2vh;
+  background: rgba(255, 255, 255, 0.51);
+}
+.el-carousel__item img {
+  font-size: 14px;
+  opacity: 0.75;
+  line-height: 200px;
+  width: 40vw;
+  margin: 0;
+}
+
+.el-carousel__item:nth-child(2n) {
+  background-color: rgba(153, 169, 191, 0.8);
+}
+
+.el-carousel__item:nth-child(2n+1) {
+  background-color: rgba(211, 220, 230, 0.9);
+}
+
+.aggregate-card {
+  position: relative; // 相对定位 设置子 定位不移动
+  height: 12vh;
+  display: flex;
+  justify-content: space-around;
+
+  .card {
+    width: 10vw;
+    height: 5vh;
+    margin-top: 2vh;
+    background-color: rgba(153, 169, 191, 0.2);
+    border: none;
+    border-radius: 14px;
+
+    ::v-deep .el-card__body:hover {
+      cursor: pointer;
+    }
+  }
+  .card-icon {
+    z-index: 0;
+    position:  absolute;
+    margin: -6vh -4vw auto;
+  }
+  span {
+    color: #FFFFFF;
+    position:  absolute;
+    margin: -2vh 0 auto;
+  }
+}
+.outermost {
+  z-index: 1;
+  margin: -0.9vh -1.1vw auto;
+  display: flex;
+  align-items: center;
+  height: 2.5vh;
+  hr {
+    width: 3.5vw;
+    transform: rotateZ(51deg);
+    margin-left: -2.9vw;
+    margin-top: 1vh;
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+  }
+}
+.outBack {
+  border-top-left-radius: 14px;
+  border-bottom-left-radius: 14px;
+  border-bottom: 5vh solid rgba(255, 255, 255, 0.1);
+  border-left: 5vh solid rgba(255, 255, 255, 0.1);
+  border-right: 4vh solid transparent;
+}
+
+.main {
+  height: 100vh;
+  background-color: black;
+}
+

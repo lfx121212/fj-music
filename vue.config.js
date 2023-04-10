@@ -1,9 +1,10 @@
 var webpack = require('webpack')
 
 
-
+const {defineConfig} = require('@vue/cli-service')
 // vue.config.js 配置说明
-module.exports = {
+module.exports = defineConfig({
+  transpileDependencies: true,
   // 在npm run build 或 yarn build 时 ，生成文件的目录名称（要和baseUrl的生产环境路径一致）（默认dist）
   outputDir: "dist",
   // 用于放置生成的静态资源 (js、css、img、fonts) 的；（项目打包之后，静态资源会放在这个文件夹下）
@@ -17,12 +18,12 @@ module.exports = {
     https: false,
     // 允许进行内网穿透
     historyApiFallback: true,
-    allowedHosts:"all",
+    allowedHosts: "all",
     proxy: {
-      '/fj': { // 匹配所有以fj为开头的请求路径
+      '/': {
         target: 'http://localhost:10409/', // 代理目标的基础路径
         ws: false,
-        pathRewrite: {'^/fj': ''} // 路径重写
+        pathRewrite: {'^/': ''} // 路径重写
       }
     }
   },
@@ -41,5 +42,5 @@ module.exports = {
         "windows.jQuery": "jquery"
       })
     ]
-  }
-}
+  },
+})

@@ -1,0 +1,23 @@
+.wavy {
+  position: relative;
+  -webkit-box-reflect: below -30px linear-gradient(transparent,rgba(0,0,0,0.2));
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  min-height: 5vh;
+  span {
+    display: inline-block;
+    font-family: inherit;
+    color: #FFFFFF;
+    font-size: 1.5vw;
+    align-items: center;
+    text-transform: uppercase;
+    animation: animate 2.5s ease-in-out infinite;
+    animation-delay: calc(0.089s * var(--i));
+  }
+  @keyframes animate {
+    0%{transform: translateY(0px)}
+    20%{transform: translateY(-10px)}
+    40%,100%{transform: translateY(0px)}
+  }
+}

@@ -1,0 +1,62 @@
+.el-input {
+  width: 20vw;
+  font-size: 16px;
+}
+
+.el-icon-close {
+  position: absolute;
+  top: 0.4vh;
+  right: 0;
+  font-size: 2vw;
+}
+
+.el-icon-close:hover {
+  color: rgba(203, 199, 199, 0.25);
+}
+
+.el-icon-search {
+  position: absolute;
+  top: 0.5vh;
+  left: -19vw;
+  font-size: 1.8vw;
+}
+
+.el-icon-search:hover {
+  color: rgba(229, 107, 107, 0.76);
+}
+
+::v-deep .search-input .el-input__inner {
+  color: #FFFFFF;
+  padding-left: 3vw;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+
+::v-deep .search-input .el_input__suffix .el_input__suffix-inner .el-input__clear {
+  color: #000000;
+}
+
+.portrait {
+  position: absolute;
+  right: 15vw;
+  top: 2vh;
+  width: 3vw;
+
+  i {
+    position: absolute;
+    left: 1vw;
+    width: 10vw;
+    top: 1.5vh;
+  }
+
+  .el-image {
+    border-radius: 100%;
+  }
+}
+
+.dropdown {
+  position: absolute;
+  font-size: 2vw;
+  top: 2.2vh;
+  right: 3vw;
+}

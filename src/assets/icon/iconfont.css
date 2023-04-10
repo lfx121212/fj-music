@@ -1,0 +1,86 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3998843 */
+  /* Color fonts */
+  src:
+          url('iconfont.woff2?t=1680836853575') format('woff2'),
+          url('iconfont.woff?t=1680836853575') format('woff'),
+          url('iconfont.ttf?t=1680836853575') format('truetype');
+}
+
+[class*= "icon-vIcon-"],
+[class^= "icon-vIcon-"] {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-vIcon-abra:before {
+  content: "\e6b5";
+}
+
+.icon-vIcon-bellsprout:before {
+  content: "\e6b6";
+}
+
+.icon-vIcon-bullbasaur:before {
+  content: "\e6b8";
+}
+
+.icon-vIcon-charmander:before {
+  content: "\e6b9";
+}
+
+.icon-vIcon-caterpie:before {
+  content: "\e6ba";
+}
+
+.icon-vIcon-dratini:before {
+  content: "\e6bb";
+}
+
+.icon-vIcon-eevee:before {
+  content: "\e6bc";
+}
+
+.icon-vIcon-mankey:before {
+  content: "\e6c2";
+}
+
+.icon-vIcon-mew:before {
+  content: "\e6c4";
+}
+
+.icon-vIcon-meowth:before {
+  content: "\e6c3";
+}
+
+.icon-vIcon-pidgey:before {
+  content: "\e6c7";
+}
+
+.icon-vIcon-xihuan:before {
+  content: "\e63b";
+}
+
+.icon-vIcon-shoucang:before {
+  content: "\e71d";
+}
+
+.icon-vIcon-tuijian:before {
+  content: "\e620";
+}
+
+.icon-vIcon-MV:before {
+  content: "\e62c";
+}
+
+.icon-vIcon-yinle:before {
+  content: "\e60d";
+}
+
+.icon-vIcon-diantai:before {
+  content: "\e600";
+}
+

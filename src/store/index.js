@@ -1,17 +1,7 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import song from './song'
 
-Vue.use(Vuex)
-
-export default new Vuex.Store({
-  state: {
-  },
-  getters: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
+export default {
   modules: {
+    song
   }
-})
+}

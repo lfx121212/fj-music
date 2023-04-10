@@ -1,0 +1,65 @@
+::v-deep .el-menu{
+  background-color: transparent;
+}
+
+.asideTop {
+  margin-top: 2vh;
+  line-height: 7vh;
+  margin-left: -5vw;
+  font-weight: bold;
+
+  .el-icon-plus {
+    position: absolute;
+    left: 10vw;
+    top: 57.5vh;
+  }
+
+  .el-icon-arrow-down {
+    position: absolute;
+    left: 7vw;
+    top: 57.5vh;
+  }
+
+  .el-icon-arrow-up {
+    position: absolute;
+    left: 7vw;
+    top: 57.5vh;
+  }
+}
+
+.asideBottom {
+  display: flex;
+  line-height: 4vh;
+  margin-left: 5vw;
+  font-weight: 100;
+  align-items: center;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.router-link-active {
+  text-decoration: none;
+  color: #fff;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  h1 {
+    font-size: 1.5vw;
+    font-weight: bolder;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  text-decoration: none;
+  color: rgb(49, 78, 194);
+}

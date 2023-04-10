@@ -8,7 +8,6 @@ module.exports={
         jquery: true
     },
     parserOptions: {  // 优先级低于parse的语法解析配置
-        parser: '@typescript-eslint/parser', // 指定ESlint的解析器
         ecmaVersion: 2020, // 允许使用ES语法
         sourceType: 'module', // 允许使用import
     },

@@ -1,0 +1,79 @@
+$border: 0.3px groove;
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  /*chrome--------------------------------------------start*/
+  ::-webkit-scrollbar {
+    width: 0.5vw;
+    height: 2vh;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgba(234, 229, 195, 0.19);
+    border-radius: 8px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(164, 164, 169, 0.42);
+  }
+  /*chrome--------------------------------------------end*/
+}
+
+.container-box {
+  position: absolute; // 绝对定位
+  left: 10vw;
+  top: 5vh;
+  width: 80vw;
+  height: 90vh;
+  backdrop-filter: blur(16px) saturate(106%);
+  -webkit-backdrop-filter: blur(16px) saturate(106%);
+  background-color: rgba(17, 25, 40, 0.69);
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  color: #FFF;
+  text-align: center;
+  align-items: center;
+}
+
+.el-aside {
+  height: 89.89vh;
+  width: 15vw !important; //强制重写
+  overflow: hidden !important; //强制重写
+  border: $border;
+  border-radius: 25px 0 0 25px;
+}
+
+.el-header {
+  border: $border;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  width: 64.97vw;
+  height: 9vh !important;
+  border-radius: 0 25px 0 0;
+}
+
+.el-main {
+  border: $border;
+  width: 64.97vw !important;
+  height: 74vh !important;
+  flex: none !important;
+
+}
+
+.el-footer {
+  border: $border;
+  width: 64.97vw;
+  height: 6.88vh !important;
+  border-radius: 0 0 25px 0;
+}
