@@ -2,9 +2,9 @@
   font-family: "iconfont"; /* Project id 3998843 */
   /* Color fonts */
   src:
-          url('iconfont.woff2?t=1680836853575') format('woff2'),
-          url('iconfont.woff?t=1680836853575') format('woff'),
-          url('iconfont.ttf?t=1680836853575') format('truetype');
+          url('iconfont.woff2?t=1681174328170') format('woff2'),
+          url('iconfont.woff?t=1681174328170') format('woff'),
+          url('iconfont.ttf?t=1681174328170') format('truetype');
 }
 
 [class*= "icon-vIcon-"],
@@ -14,6 +14,62 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-vIcon-Icon_5_Cassette:before {
+  content: "\e9ac";
+}
+
+.icon-vIcon-Icon_18_Headphone:before {
+  content: "\e9ad";
+}
+
+.icon-vIcon-Icon_14_SEO:before {
+  content: "\e9ae";
+}
+
+.icon-vIcon-Icon_3_Console:before {
+  content: "\e9af";
+}
+
+.icon-vIcon-Icon_13_Camera:before {
+  content: "\e9b0";
+}
+
+.icon-vIcon-a-Icon_30_3DGlasses:before {
+  content: "\e9b1";
+}
+
+.icon-vIcon-Icon_21_VR:before {
+  content: "\e9b2";
+}
+
+.icon-vIcon-a-Icon_11_RadioTape:before {
+  content: "\e9b3";
+}
+
+.icon-vIcon-Icon_23_Domino:before {
+  content: "\e9b4";
+}
+
+.icon-vIcon-Icon_1_Console:before {
+  content: "\e9b5";
+}
+
+.icon-vIcon-Icon_29_Disco:before {
+  content: "\e9b6";
+}
+
+.icon-vIcon-Icon_21_Barcode:before {
+  content: "\e9b7";
+}
+
+.icon-vIcon-Icon_20_dice:before {
+  content: "\e9b8";
+}
+
+.icon-vIcon-Console:before {
+  content: "\e9b9";
 }
 
 .icon-vIcon-abra:before {

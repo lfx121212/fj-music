@@ -1,14 +1,240 @@
+.showOpen {
+  position: absolute;
+  font-size: 2vw;
+  color: white;
+  left: 10vw;
+  z-index: 2;
+}
+
 .playView {
   position: absolute;
-  bottom: 0;
-  background-color: rgba(126, 120, 120, 0.43);
-  height: 8vh;
-  width: 100%;
-  padding-top: -3vh;
+  bottom: 5vh;
+  border-radius: 0 0 24px 24px;
+  background-size: 80vw;
+  backdrop-filter: blur(20px);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.22), rgba(86, 220, 216, 0.35) 5%, rgba(220, 86, 86, 0.45), rgba(171, 130, 231, 0.75), rgba(255, 255, 255, 0.19));
+  height: 8.5vh;
+  left: 10vw;
+  width: 80vw;
+  z-index: 1;
 
- .item-i  {
-    font-size: 3vw;
-   position: absolute;
-   left: 50%;
+  .item-i {
+    color: rgba(255, 255, 255);
+    font-size: 2.5vw;
+    position: absolute;
+    left: 50%;
+    top: 1vh;
+  }
+
+  .item-l {
+    color: rgba(255, 255, 255);
+    font-size: 1.5vw;
+    position: absolute;
+    left: 45%;
+    top: 2vh;
+  }
+
+  .item-r {
+    color: rgba(255, 255, 255);
+    font-size: 1.5vw;
+    position: absolute;
+    left: 56%;
+    top: 2vh;
+  }
+
+  .item-discover {
+    color: rgba(255, 255, 255);
+    font-size: 1.5vw;
+    position: absolute;
+    left: 40.5%;
+    top: 2vh;
+  }
+
+  .item-like {
+    color: rgba(255, 255, 255);
+    position: absolute;
+    left: 35.5%;
+    top: 2.5vh;
+  }
+
+  .item-head {
+    color: rgba(255, 255, 255);
+    font-size: 1.5vw;
+    position: absolute;
+    right: 10.5%;
+    top: 2vh;
+  }
+
+  .item-receiving {
+    color: rgba(255, 255, 255);
+    font-size: 1.5vw;
+    position: absolute;
+    right: 5.5%;
+    top: 2vh;
+  }
+}
+
+.playing-speed {
+  display: flex;
+  color: #ffffff;
+
+  .play-begin {
+    position: absolute;
+    left: 3%;
+  }
+
+  .play-end {
+    position: absolute;
+    right: 3%;
+  }
+
+  .play-move {
+    position: absolute;
+    width: 60vw;
+    left: 5vw;
+  }
+
+  .cur-progress {
+    background-color: #ffffff;
+    height: 0.5vh;
+    border-radius: 50px 0 0 50px;
+  }
+
+  .idot {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #ffffff;
+    top: -0.5vh;
+  }
+}
+
+.has-lyric {
+  position: absolute;
+  height: 6vh;
+  overflow: hidden;
+  left: 62%;
+  top: 1.5vh;
+
+  .no-lyric {
+    color: #FFFFFF;
+    margin-top: 1.2vh;
+  }
+}
+
+.lyric-fade-leave-to {
+  transform: translateX(5vw);
+  opacity: 0;
+}
+
+.lyric-fade-leave-active {
+  transition: all 0.3s ease;
+}
+
+p {
+  color: rgba(255, 255, 255, 0.57);
+  margin-top: 0;
+  margin-bottom: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.singer img {
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+}
+
+.imgBack {
+  -webkit-animation: rotateImg 5s linear infinite;
+}
+
+@keyframes rotateImg {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rotateImg {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.singer {
+  position: absolute;
+  background-color: #FFFFFF;
+  width: 70px;
+  height: 70px;
+  top: 1vh;
+  left: 3vw;
+  border-radius: 100%;
+}
+
+.singName {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.51);
+  font-size: 15px;
+  top: 1vh;
+  left: 8vw;
+  text-align: left;
+}
+
+.singerName {
+  position: absolute;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.34);
+  top: 5vh;
+  left: 7.5vw;
+}
+
+.dialog .el-dialog{
+  overflow-y: hidden;
+  position: absolute;
+  right: 0;
+  top: 3vh;
+  width: 20vw;
+  height: 70vh;
+  background-color: rgba(0, 0, 0, 0.45);
+  color: #FFFFFF;
+
+
+  .el-dialog__header .el-dialog__title {
+    color: #FFFFFF;
+  }
+  .el-dialog__body {
+    color: rgba(255, 255, 255, 0.87);
+    height: 70vh;
+  }
+  .el-dialog__body .el-card {
+    position: absolute;
+    right: 0;
+    width: 20vw;
+    height: 50vh;
+    overflow: auto;
+    background-color: transparent;
+    border: none;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+
+    .el-card__body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .el-card__body span:hover {
+      font-size: 15px;
+      color: rgba(0, 255, 255, 0.47);
+    }
   }
 }

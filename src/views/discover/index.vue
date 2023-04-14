@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="box">
     <div class="heard">
       <el-carousel :interval="4000" type="card" height="20vh">
         <el-carousel-item v-for="item in backPages" :key="item.name">
@@ -20,7 +20,30 @@
       </div>
     </div>
     <div class="main">
+      <h1>歌手列表</h1>
+      <div class="main_singer">
+        <div v-for="(itme,i) in 12" :key="i">
+          <div class="main_card">
 
+          </div>
+        </div>
+      </div>
+      <h1>歌单列表</h1>
+      <div class="main_sheet">
+        <div v-for="(itme,i) in 7" :key="i">
+          <div class="main_card">
+
+          </div>
+        </div>
+      </div>
+      <h1>独家定制</h1>
+      <div class="main_sheet">
+        <div v-for="(itme,i) in 7" :key="i">
+          <div class="customized">
+
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -34,9 +57,10 @@ export default {
   data() {
     return {
       backPages: useBackPage(),
-      cards: useCards()
+      cards: useCards(),
     }
   },
+
   methods: {
     cardsChange(item) {
       this.$message('click on item ' + item.name);

@@ -4,10 +4,62 @@
 
 .main {
   position: relative;
-  height: 50vh;
   margin-bottom: 2vh;
-  background: rgba(255, 255, 255, 0.51);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+
+  .main_singer {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 62vw;
+  }
+
+  .main_sheet {
+    margin-top: 5vh;
+    height: 20vw;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 62vw;
+  }
+
+  .main_card {
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    width: 8vw;
+    height: 20vh;
+    margin: 3vh 2vw auto;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .main_card:hover {
+    background-color: rgba(116, 243, 219, 0.22);
+    transform: scale(1.2);
+  }
+
+  .customized {
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    width: 16vw;
+    height: 20vh;
+    margin: 3vh 2vw auto;
+  }
+
+  h1 {
+    color: #FFFFFF;
+  }
 }
+
 .el-carousel__item img {
   font-size: 14px;
   opacity: 0.75;
@@ -42,23 +94,27 @@
       cursor: pointer;
     }
   }
+
   .card-icon {
     z-index: 0;
-    position:  absolute;
+    position: absolute;
     margin: -6vh -4vw auto;
   }
+
   span {
     color: #FFFFFF;
-    position:  absolute;
+    position: absolute;
     margin: -2vh 0 auto;
   }
 }
+
 .outermost {
   z-index: 1;
   margin: -0.9vh -1.1vw auto;
   display: flex;
   align-items: center;
   height: 2.5vh;
+
   hr {
     width: 3.5vw;
     transform: rotateZ(51deg);
@@ -69,6 +125,7 @@
     background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
   }
 }
+
 .outBack {
   border-top-left-radius: 14px;
   border-bottom-left-radius: 14px;
@@ -77,8 +134,10 @@
   border-right: 4vh solid transparent;
 }
 
-.main {
-  height: 100vh;
-  background-color: black;
-}
 
+.back {
+  width: 2vw;
+  background-color: #ffffff;
+  position: relative;
+  bottom: 0;
+}

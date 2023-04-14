@@ -30,7 +30,7 @@ import WAVES  from 'vanta/src/vanta.waves'
 import AsideView from "@/components/layout/aside";
 import FooterView from "@/components/layout/footer";
 import HeaderView from "@/components/layout/header";
-import PlayView from "@/components/layout/play/palyView";
+import PlayView from "@/components/layout/play";
 import AudioView from "@/components/layout/audio";
 
 export default {
